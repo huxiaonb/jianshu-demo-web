@@ -1,7 +1,6 @@
 import {Injectable} from "@tanbo/vue-di-plugin";
 import {Http} from "@/services/Http";
-
-export interface User {
+export interface UserItem {
     name: string,
     avatar: string,
     like: number,
@@ -10,7 +9,7 @@ export interface User {
 export interface ArticleItem {
     title: string;
     content: string;
-    user: User;
+    user: UserItem;
     read: number;
     pay: number;
     like: number;

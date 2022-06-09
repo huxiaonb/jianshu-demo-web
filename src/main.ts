@@ -3,7 +3,6 @@ import App from './App.vue'
 import router from './router'
 import { reflectiveInjectorPlugin } from '@tanbo/vue-di-plugin'
 import {Http} from "@/services/Http";
-
 function getBaseURL () {
     if (process.env.MOCK) {
         return '/mock'

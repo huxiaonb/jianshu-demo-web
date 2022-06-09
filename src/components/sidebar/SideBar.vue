@@ -1,5 +1,7 @@
 <template>
-  <div class="sidebar-wrapper"></div>
+  <div class="sidebar-wrapper">
+
+  </div>
 </template>
 <script lang="ts">
 import {defineComponent, reactive, toRefs} from "vue";

@@ -1,7 +1,6 @@
 module.exports = {
     parserOptions: {
         parser: 'babel-eslint',
-        sourceType: "module"
     },
     rules: {
         'max-len': 'off',

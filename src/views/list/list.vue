@@ -11,10 +11,10 @@
               {{ article.content + '...' }}
             </p>
             <div class="meta">
-              <span>{{ article.pay }}</span>
+              <span class="icon-wrapper" style="color: #ea6f5a;"><i class="icon diamond" />{{ article.pay }}</span>
               <span>{{ article.username }}</span>
-              <span>{{ article.reply }}</span>
-              <span>{{ article.like }}</span>
+              <span class="icon-wrapper"><i class="icon reply" />{{ article.reply }}</span>
+              <span class="icon-wrapper"><i class="icon like" />{{ article.like }}</span>
             </div>
           </div>
         </li>
@@ -85,12 +85,33 @@ export default defineComponent({
       color: #999;
     }
     .meta {
+      display: flex;
+      align-items: center;
       line-height: 20px;
       font-size: 12px;
       color: #b4b4b4;
       span{
         margin-right: 10px;
       }
+    }
+  }
+  .icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    .icon {
+      width: 13px;
+      height: 13px;
+      display: inline-block;
+      background-size: 13px 13px;
+    }
+    .diamond {
+      background-image: url("./assets/diamond.svg");
+    }
+    .reply {
+      background-image: url("./assets/comment.svg");
+    }
+    .like {
+      background-image: url("./assets/love.svg");
     }
   }
 </style>

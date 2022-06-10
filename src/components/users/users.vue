@@ -14,7 +14,7 @@
                 <div class="desc">写了{{ user.char_total }}字，{{ user.like }}喜欢</div>
               </div>
             </div>
-            <div class="follow-btn"><i class="icon"></i>关注</div>
+            <div class="follow-btn"><i class="icon"></i><span>关注</span></div>
           </li>
         </ul>
       </a>

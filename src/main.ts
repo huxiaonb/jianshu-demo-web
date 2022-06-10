@@ -9,15 +9,15 @@ function getBaseURL () {
     }
 
     if (process.env.NODE_ENV === 'development') {
-        return '/api'
+        return 'http://localhost:3000/'
     }
 
     if (process.env.TEST) {
         const protocol = typeof window !== 'undefined' ? window.location.protocol : 'http:'
-        return `${protocol}//localhost/api`
+        return `${protocol}//localhost:3000/`
     }
 
-    return 'http://localhost/api'
+    return 'http://localhost:3000/'
 }
 
 const app = createApp(App);

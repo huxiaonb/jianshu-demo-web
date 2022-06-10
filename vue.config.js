@@ -6,7 +6,16 @@ const version = process.env.CI_COMMIT_TAG || pkgJson.version
 module.exports = {
   devServer: {
     port: 8088,
-    disableHostCheck: true
+    disableHostCheck: true,
+    // proxy: {
+    //   '/api': {
+    //     target: 'http://localhost:3000/',
+    //     changeOrigin: true,
+    //     // pathRewrite: {
+    //     //   '^api': ''
+    //     // }
+    //   }
+    // }
   },
   chainWebpack: config => {
     config.plugin('html').tap((options) => {

@@ -43,6 +43,7 @@ export class Http {
     defaultErrorHandlers: HttpDefaultErrorHandle[] = []) {
     this.axiosInstance = Axios.create(this.defaultOptions)
     this.axiosInstance.interceptors.request.use(request => {
+      console.log(request)
       request.headers.common['X-Cf-TeamID'] = this.commonRequestFields.team_id || -1
       request.data.common = {
         ...this.commonRequestFields
@@ -54,7 +55,7 @@ export class Http {
       body.resp_common = body.resp_common || {}
       const { ret, msg } = body.resp_common
       if (ret === 0) {
-        return body
+        return body.data
       }
 
       const timer = setTimeout(() => {

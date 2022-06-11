@@ -1,7 +1,7 @@
 <template>
   <div class="user-bar-wrapper">
     <div class="title">
-      <span>推荐作者</span>
+      <div class="title-text">推荐作者</div>
       <a class="page-chage">
         <ul class="user-list-wrapper">
           <li v-for="user in users" :key="user.id" class="user-wrapper">
@@ -93,5 +93,9 @@ export default defineComponent({
     background-repeat: no-repeat;
     background-image: url("./assets/add.svg");
   }
+}
+.title-text {
+  text-align: left;
+  padding-left: 40px;
 }
 </style>

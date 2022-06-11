@@ -15,10 +15,10 @@
   </div>
 </template>
 <script lang="ts">
-import {defineComponent, reactive, toRefs} from "vue";
+import { defineComponent, reactive, toRefs } from 'vue'
 
 export default defineComponent({
-  setup(){
+  setup () {
     const data = reactive({})
     return {
       ...toRefs(data)
@@ -27,9 +27,20 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
+.sidebar-wrapper {
+  position: fixed;
+  top: 216px;
+  z-index: 99;
+  user-select: none;
+  left: calc((100vw - 1000px)/2 - 78px);
+  max-width: 56px;
+}
 .item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 12px;
   .icon {
     width: 48px;
     height: 48px;
@@ -48,7 +59,7 @@ export default defineComponent({
   }
   .desc {
     height: 19px;
-    margin-top: 4px;
+    margin-top: 6px;
     color: #666;
   }
 }

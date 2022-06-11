@@ -6,7 +6,7 @@
       <ul class="article-info">
         <li v-for="article in list" :key="article.id" class="info-wrapper">
           <div>
-            <a class="title" :href="`/article/${article.id}`" target="_blank">{{ article.title }}</a>
+            <a class="title" :href="`/article/${article._id}`" target="_blank">{{ article.title }}</a>
             <p class="abstract">
               {{ article.content + '...' }}
             </p>
@@ -105,7 +105,7 @@ export default defineComponent({
       background-size: 13px 13px;
     }
     .diamond {
-      background-image: url("./assets/diamond.svg");
+      background-image: url("../detail/assets/diamond.svg");
     }
     .reply {
       background-image: url("./assets/comment.svg");

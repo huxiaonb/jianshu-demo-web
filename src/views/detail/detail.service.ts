@@ -7,7 +7,7 @@ export class DetailService {
   constructor (private http: Http) {
   }
 
-  getArticleDetail (params: { articleId: number }) {
+  getArticleDetail (params: { articleId: string }) {
     return this.http.post<ArticleItem>('/article/detail', params)
   }
 }

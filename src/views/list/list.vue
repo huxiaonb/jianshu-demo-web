@@ -8,7 +8,7 @@
           <div>
             <a class="title" :href="`/article/${article._id}`" target="_blank">{{ article.title }}</a>
             <p class="abstract">
-              {{ article.content + '...' }}
+              {{ article.abstract + '...' }}
             </p>
             <div class="meta">
               <span class="icon-wrapper" style="color: #ea6f5a;"><i class="icon diamond" />{{ article.pay }}</span>

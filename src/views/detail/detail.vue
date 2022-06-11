@@ -28,6 +28,7 @@
     <div style="display: flex">
       <side-bar />
     </div>
+    <div><RecommendArticles /></div>
   </div>
 </template>
 <script lang="ts">
@@ -37,9 +38,10 @@ import { DetailService } from '@/views/detail/detail.service'
 import { useRoute } from 'vue-router'
 import { ArticleItem, UserItem } from '@/views/list/list.service'
 import SideBar from '@/components/sidebar/SideBar.vue'
+import RecommendArticles from '@/components/RecommendArticles.vue'
 
 export default defineComponent({
-  components: { SideBar },
+  components: { SideBar, RecommendArticles },
   setup () {
     const injector = useReflectiveInjector([DetailService])
     const service = injector.get(DetailService)
@@ -71,10 +73,13 @@ export default defineComponent({
   background-color: #f9f9f9;
   min-height: 100vh;
   .content{
-    width: 1000px;
+    width: 700px;
     padding: 0 16px;
     font-size: 16px;
     background-color: #fff;
+    .title {
+      text-align: left;
+    }
   }
   .article-content {
     padding: 32px;

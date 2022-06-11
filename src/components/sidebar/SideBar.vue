@@ -32,7 +32,7 @@ export default defineComponent({
   top: 216px;
   z-index: 99;
   user-select: none;
-  left: calc((100vw - 1000px)/2 - 78px);
+  left: calc((100vw - 700px)/2 - 78px);
   max-width: 56px;
 }
 .item {

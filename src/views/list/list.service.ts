@@ -9,6 +9,7 @@ export interface UserItem {
 export interface ArticleItem {
     _id: string
     title: string;
+    abstract: string
     content: string;
     user: UserItem;
     read: number;
@@ -22,6 +23,7 @@ export interface ArticleItem {
 export interface ArticleDto {
     _id: string
     title: string;
+    abstract:string
     content: string;
     read: number;
     pay: number;
@@ -45,6 +47,7 @@ export class ListService {
         return Object.assign({}, {
           _id: item._id,
           title: item.title,
+          abstract: item.abstract,
           content: item.content,
           read: item.read,
           pay: item.pay,

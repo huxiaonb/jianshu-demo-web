@@ -1,6 +1,6 @@
 # 使用两阶段编译
 # 第一阶段builder用的镜像
-FROM node:15.14.0-alpine as builder
+FROM node:16.15.1-alpine as builder
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories && apk update && apk add tzdata ca-certificates && apk add curl
 
 # 用npm执行编译命令

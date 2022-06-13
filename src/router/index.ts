@@ -1,4 +1,4 @@
-import {createRouter, createWebHistory, RouteRecordRaw, START_LOCATION} from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw, START_LOCATION } from 'vue-router'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',

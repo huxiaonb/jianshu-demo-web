@@ -1,10 +1,10 @@
 # jianshu-demo-webdre
 
 ## 首页截图
-![alt 首页](j_main.png)
+![alt 首页](./j_main.png)
 
 ##文章详情页截图
-![alt 首页](j_detail.png)
+![alt 首页](./j_detail.png)
 
 ## Project setup
 ```
